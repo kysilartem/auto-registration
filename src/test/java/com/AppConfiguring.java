@@ -1,6 +1,7 @@
 package com;
 
 import com.codeborne.selenide.Condition;
+import groovy.lang.MissingPropertyException;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -103,8 +104,14 @@ public class AppConfiguring {
 
     @Test (priority = 4)
     public void createJenkinsCreds(){
-        System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*"+"\n");
-        System.out.println(Credentials.buildJenkinsCredentials()+"\n");
-        System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*");
+
+        try {
+            throw new Exception();
+        } catch (Exception e) {
+            System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*"+"\n");
+            System.out.println(Credentials.buildJenkinsCredentials()+"\n");
+            System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*");
+        }
+
     }
 }
