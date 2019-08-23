@@ -36,21 +36,21 @@ void setCredentials() {
     def regCode = "EMPTY"
 
     try {
-        instanceName = project.property "*INSTANCE:"
+        instanceName = project.property "INSTANCE"
     }
     catch(MissingPropertyException e){
         println "You forgot to set an Instance name"
     }
 
     try {
-        URL = project.property "URL:"
+        URL = project.property "URL"
     }
     catch(MissingPropertyException e){
         println "You forgot to set an URL"
     }
 
     try {
-        regCode = project.property "REGISTRATION CODE:"
+        regCode = project.property "REGISTRATION_CODE"
     }
     catch(MissingPropertyException e){
         println "You forgot to set an CODE"

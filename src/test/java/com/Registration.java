@@ -2,7 +2,6 @@ package com;
 
 import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
-import org.testng.annotations.Test;
 
 import java.io.IOException;
 
@@ -14,7 +13,7 @@ public class Registration{
     private final String EMAIL_PASSWORD ="27cc4949d6104a59a0deb2433caaeb573c520aaf";
 
 
-    @Test (priority = 0)
+
     public void fillingTheForm() throws IOException {
 
         Credentials.initCredentials();
@@ -36,7 +35,7 @@ public class Registration{
 
     }
 
-    @Test(dependsOnMethods = "fillingTheForm" )
+
     public void confirmRegistration() {
 
         AccountConfirmation.checkNewMail(GMAIL_POP, Credentials.getEmail(), EMAIL_PASSWORD);

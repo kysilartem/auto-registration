@@ -4,6 +4,8 @@ import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 import java.nio.file.Paths;
 
 import static com.codeborne.selenide.Selectors.*;
@@ -26,12 +28,12 @@ public class AppConfiguring {
     private static final String GCM_KEY = "AAAAtuvz-_o:APA91bFqHJ_H90fwBaJ1JVlvcRvOnZdCgasXRgpJKK0r5cinAE6bg0D6NifD5VeocdsJSSLJc_R6gWm6EGcdFYeJqTmGPNXyZhc1yAcDyecloV8zlNjuGiHXF09v7-0gXvQT5slgWjgO";
 
 
-//    @BeforeClass
-//    private void setUp () throws InterruptedException {
-//        Registration reg = new Registration();
-//        reg.fillingTheForm();
-//        reg.confirmRegistration();
-//    }
+    @BeforeClass
+    private void setUp () throws InterruptedException, IOException {
+        Registration reg = new Registration();
+        reg.fillingTheForm();
+        reg.confirmRegistration();
+    }
 
     @Test
     public void createApp() throws InterruptedException {
@@ -80,7 +82,7 @@ public class AppConfiguring {
         $(byAttribute("title",APP_NAME)).click();
         $(By.xpath("//*[@id=\"app-list\"]/a[6]")).click();
         $(By.xpath("//*[@id=\"list\"]/div[1]/ul/li[3]/a")).click();
-        $(By.xpath("//*[@id=\"users_settings_users_index\"]")).click();
+        //$(By.xpath("//*[@id=\"users_settings_users_index\"]")).click();
         $(By.xpath("//*[@id=\"users_settings_new_user_push_enable\"]")).click();
         $(By.xpath("//*[@id=\"form-add-app\"]/div/div/div[3]/div[2]/div[2]/input")).click();
 
