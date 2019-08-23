@@ -26,12 +26,12 @@ public class AppConfiguring {
     private static final String GCM_KEY = "AAAAtuvz-_o:APA91bFqHJ_H90fwBaJ1JVlvcRvOnZdCgasXRgpJKK0r5cinAE6bg0D6NifD5VeocdsJSSLJc_R6gWm6EGcdFYeJqTmGPNXyZhc1yAcDyecloV8zlNjuGiHXF09v7-0gXvQT5slgWjgO";
 
 
-    @BeforeClass
-    private void setUp () throws InterruptedException {
-        Registration reg = new Registration();
-        reg.fillingTheForm();
-        reg.confirmRegistration();
-    }
+//    @BeforeClass
+//    private void setUp () throws InterruptedException {
+//        Registration reg = new Registration();
+//        reg.fillingTheForm();
+//        reg.confirmRegistration();
+//    }
 
     @Test
     public void createApp() throws InterruptedException {

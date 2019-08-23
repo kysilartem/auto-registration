@@ -1,7 +1,13 @@
 package com;
 
+import com.jayway.restassured.path.json.JsonPath;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.openqa.selenium.By;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 import static com.codeborne.selenide.Selenide.$;
 
 public class Credentials {
@@ -119,15 +125,19 @@ public class Credentials {
     }
 
 
-    static void initCredentials() {
+    static void initCredentials() throws IOException {
 
-        setInstanceName("STAGE");
-        setUrl("https://adminstage5.quickblox.com");
-        setFullName("test test");
-        setEmail("qb.automated.team@gmail.com");
-        setLogin("test777");
-        setPassword(DigestUtils.sha1Hex ("Fishki123"));
-        setRegCode("CZAXAQ");
+        String credentials = new String(Files.readAllBytes(Paths.get("src/test/resources/credentials.json")));
+        JsonPath jsonPath = new JsonPath(credentials);
+
+        setInstanceName(jsonPath.getString("instance"));
+        setUrl(jsonPath.getString("url"));
+        setFullName(jsonPath.getString("fullName"));
+        setEmail(jsonPath.getString("email"));
+        setLogin(jsonPath.getString("login"));
+        setPassword(DigestUtils.sha1Hex (getUrl().substring(8)));
+        setRegCode(jsonPath.getString("regCode"));
+
     }
 
 

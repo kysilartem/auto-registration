@@ -7,10 +7,11 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
-test { 
-    useTestNG() { 
-        useDefaultListeners = true 
-        suites 'src/test/resources/suite.xml' 
+test {
+    useTestNG() {
+        setCredentials()
+        useDefaultListeners = true
+        suites 'src/test/resources/suite.xml'
     }
 }
 
@@ -22,4 +23,48 @@ dependencies {
     testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
     compile group: 'com.codeborne', name: 'selenide', version: '5.2.8'
     compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+    compile group: 'com.jayway.restassured', name: 'json-path', version: '2.9.0'
+
+}
+
+void setCredentials() {
+
+    String filePath = 'src/test/resources/credentials.json'
+
+    def instanceName = "EMPTY"
+    def URL = "EMPTY"
+    def regCode = "EMPTY"
+
+    try {
+        instanceName = project.property "*INSTANCE:"
+    }
+    catch(MissingPropertyException e){
+        println "You forgot to set an Instance name"
+    }
+
+    try {
+        URL = project.property "URL:"
+    }
+    catch(MissingPropertyException e){
+        println "You forgot to set an URL"
+    }
+
+    try {
+        regCode = project.property "REGISTRATION CODE:"
+    }
+    catch(MissingPropertyException e){
+        println "You forgot to set an CODE"
+    }
+
+    StringBuilder creds = new StringBuilder()
+    creds.append("{").append("\n").append("\"").append("instance").append("\"").append(":").append("\"").append(instanceName).append("\"").append(",").append("\n")
+            .append("\"").append("url").append("\"").append(":").append("\"").append(URL).append("\"").append(",").append("\n")
+            .append("\"").append("regCode").append("\"").append(":").append("\"").append(regCode).append("\"").append(",").append("\n")
+            .append("\"").append("fullName").append("\"").append(":").append("\"").append("test test").append("\"").append(",").append("\n")
+            .append("\"").append("email").append("\"").append(":").append("\"").append("qb.automated.team@gmail.com").append("\"").append(",").append("\n")
+            .append("\"").append("login").append("\"").append(":").append("\"").append("test").append("\"").append("\n").append("}")
+    
+    File file = new File(filePath)
+    file.write(creds.toString())
+
 }
