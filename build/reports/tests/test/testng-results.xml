@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="44074" started-at="2019-08-23T08:34:58Z" finished-at="2019-08-23T08:35:42Z">
+    <groups>
+    </groups>
+    <test name="GeneratingCredentialsForJenkins" duration-ms="44074" started-at="2019-08-23T08:34:58Z" finished-at="2019-08-23T08:35:42Z">
+      <class name="com.AppConfiguring">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.AppConfiguring@387db899]" name="setUp" is-config="true" duration-ms="15132" started-at="2019-08-23T08:34:58Z" finished-at="2019-08-23T08:35:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="createApp()[pri:0, instance:com.AppConfiguring@387db899]" name="createApp" duration-ms="6648" started-at="2019-08-23T08:35:13Z" finished-at="2019-08-23T08:35:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createApp -->
+        <test-method status="PASS" signature="uploadCertificates()[pri:1, instance:com.AppConfiguring@387db899]" name="uploadCertificates" duration-ms="16655" started-at="2019-08-23T08:35:20Z" finished-at="2019-08-23T08:35:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadCertificates -->
+        <test-method status="PASS" signature="setAdditionalOptions()[pri:2, instance:com.AppConfiguring@387db899]" name="setAdditionalOptions" duration-ms="3720" started-at="2019-08-23T08:35:36Z" finished-at="2019-08-23T08:35:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setAdditionalOptions -->
+        <test-method status="PASS" signature="getCredentials()[pri:3, instance:com.AppConfiguring@387db899]" name="getCredentials" duration-ms="1889" started-at="2019-08-23T08:35:40Z" finished-at="2019-08-23T08:35:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCredentials -->
+        <test-method status="PASS" signature="createJenkinsCreds()[pri:4, instance:com.AppConfiguring@387db899]" name="createJenkinsCreds" duration-ms="0" started-at="2019-08-23T08:35:42Z" finished-at="2019-08-23T08:35:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createJenkinsCreds -->
+      </class> <!-- com.AppConfiguring -->
+    </test> <!-- GeneratingCredentialsForJenkins -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'auto-registration'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+test { 
+    useTestNG() { 
+        useDefaultListeners = true 
+        suites 'src/test/resources/suite.xml' 
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+    compile group: 'com.codeborne', name: 'selenide', version: '5.2.8'
+    compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+}
