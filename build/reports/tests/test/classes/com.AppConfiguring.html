@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">11.851s</div>
+<div class="counter">1.047s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,9 +66,6 @@
 <li>
 <a href="#tab1">Tests</a>
 </li>
-<li>
-<a href="#tab2">Standard error</a>
-</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
@@ -76,22 +73,11 @@
 <a name="setUp"></a>
 <h3 class="failures">setUp</h3>
 <span class="code">
-<pre>Element not found {By.xpath: //*[@id=&quot;reg-block&quot;]/div/div/div/h3}
-Expected: visible
-Page source: file:/C:/auto/auto-registration/build/reports/tests/1566564114062.0.html
-Timeout: 4 s.
-Caused by: NoSuchWindowException: no such window: target window already closed
-	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:37)
-	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:100)
-	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:65)
-	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
-	at com.codeborne.selenide.commands.Should.execute(Should.java:10)
-	at com.codeborne.selenide.commands.Commands.execute(Commands.java:144)
-	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:99)
-	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)
-	at com.sun.proxy.$Proxy8.shouldBe(Unknown Source)
-	at com.Registration.fillingTheForm(Registration.java:21)
-	at com.AppConfiguring.setUp(AppConfiguring.java:32)
+<pre>java.lang.StringIndexOutOfBoundsException: String index out of range: -3
+	at java.lang.String.substring(String.java:1931)
+	at com.Credentials.initCredentials(Credentials.java:138)
+	at com.Registration.fillingTheForm(Registration.java:19)
+	at com.AppConfiguring.setUp(AppConfiguring.java:35)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -143,32 +129,6 @@ Caused by: NoSuchWindowException: no such window: target window already closed
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=76.0.3809.100)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-M9LRRON', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62245}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: fb81a8e56de3308e486420dd432de89a
-*** Element info: {Using=xpath, value=//*[@id=&quot;reg-block&quot;]/div/div/div/h3}
-	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:28)
-	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:74)
-	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:50)
-	... 59 more
 </pre>
 </span>
 </div>
@@ -205,7 +165,7 @@ Session ID: fb81a8e56de3308e486420dd432de89a
 </tr>
 <tr>
 <td class="failures">setUp</td>
-<td class="failures">11.833s</td>
+<td class="failures">1.047s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
@@ -215,50 +175,6 @@ Session ID: fb81a8e56de3308e486420dd432de89a
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
-<h2>Standard error</h2>
-<span class="code">
-<pre>авг 23, 2019 3:41:42 PM com.codeborne.selenide.drivercommands.LazyDriver getAndCheckWebDriver
-INFO: No webdriver is bound to current thread: 11 - let's create a new webdriver
-SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}) on port 37471
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-авг 23, 2019 3:41:46 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-авг 23, 2019 3:41:46 PM com.codeborne.selenide.webdriver.BrowserResizer adjustBrowserSize
-INFO: Set browser size to 1366x768
-авг 23, 2019 3:41:47 PM com.codeborne.selenide.webdriver.WebDriverFactory logBrowserVersion
-INFO: BrowserName=chrome Version=76.0.3809.100 Platform=XP
-авг 23, 2019 3:41:47 PM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
-INFO: Selenide v. 5.2.8
-авг 23, 2019 3:41:47 PM com.codeborne.selenide.webdriver.WebDriverFactory logSeleniumInfo
-INFO: Selenium WebDriver v. 3.141.59 build time: 2018-11-14T08:17:03
-авг 23, 2019 3:41:47 PM com.codeborne.selenide.drivercommands.CreateDriverCommand createDriver
-INFO: Create webdriver in current thread 11: ChromeDriver -&gt; ChromeDriver: chrome on XP (fb81a8e56de3308e486420dd432de89a)
-авг 23, 2019 3:41:54 PM com.codeborne.selenide.impl.ScreenShotLaboratory savePageSourceToFile
-WARNING: Failed to save page source to 1566564114062.0 because of org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=76.0.3809.100)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-M9LRRON', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62245}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: fb81a8e56de3308e486420dd432de89a
-авг 23, 2019 3:41:54 PM com.codeborne.selenide.impl.ScreenShotLaboratory takeScreenshotImage
-SEVERE: Failed to take screenshot to 1566564114062.0 because of org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=76.0.3809.100)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-M9LRRON', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62245}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: fb81a8e56de3308e486420dd432de89a
-</pre>
-</span>
-</div>
 </div>
 <div id="footer">
 <p>
@@ -267,7 +183,7 @@ Session ID: fb81a8e56de3308e486420dd432de89a
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.10</a> at 23.08.2019 15:41:55</p>
+<a href="http://www.gradle.org">Gradle 4.10</a> at 23.08.2019 17:37:24</p>
 </div>
 </div>
 </body>
