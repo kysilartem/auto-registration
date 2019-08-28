@@ -1,7 +1,6 @@
 package com;
 
 import com.codeborne.selenide.Condition;
-import groovy.lang.MissingPropertyException;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -30,7 +29,7 @@ public class AppConfiguring {
 
 
     @BeforeClass
-    private void setUp () throws InterruptedException, IOException {
+    private void setUp () throws IOException {
         Registration reg = new Registration();
         reg.fillingTheForm();
         reg.confirmRegistration();
@@ -50,12 +49,13 @@ public class AppConfiguring {
     Thread.sleep(2500);
     }
 
-    @Test (priority = 1)
+    @Test (priority = 1,dependsOnMethods = "createApp")
     public void uploadCertificates() throws InterruptedException {
 
         open(Credentials.getUrl() + "/apps");
         $(byAttribute("title",APP_NAME)).click();
         $(By.xpath("//*[@id=\"app-list\"]/a[5]/i")).click();
+
         $(By.xpath("//*[@id=\"workspace\"]/div[1]/div[2]/div[1]/ul/li[4]/a")).click();
         $(By.xpath(".//*[@id='upload_cert_password']")).setValue(APNS_CERTIFICATE_PASSWORD);
         $(By.xpath("//*[@id=\"upload_cert\"]")).sendKeys(Paths.get(APNS_CERTIFICATE_PATH).toAbsolutePath().toString());
@@ -79,12 +79,18 @@ public class AppConfiguring {
 
     @Test (priority = 2)
     public void setAdditionalOptions () {
+
         open(Credentials.getUrl() + "/apps");
         $(byAttribute("title",APP_NAME)).click();
         $(By.xpath("//*[@id=\"app-list\"]/a[6]")).click();
         $(By.xpath("//*[@id=\"list\"]/div[1]/ul/li[3]/a")).click();
-        //$(By.xpath("//*[@id=\"users_settings_users_index\"]")).click();
-        $(By.xpath("//*[@id=\"users_settings_new_user_push_enable\"]")).click();
+
+        if ($(By.xpath("//*[@id=\"users_settings_users_index\"]")).getAttribute("checked")==null){
+            $(By.xpath("//*[@id=\"users_settings_users_index\"]")).click();
+        }
+        if($(By.xpath("//*[@id=\"users_settings_new_user_push_enable\"]")).getAttribute("checked")==null) {
+            $(By.xpath("//*[@id=\"users_settings_new_user_push_enable\"]")).click();
+        }
         $(By.xpath("//*[@id=\"form-add-app\"]/div/div/div[3]/div[2]/div[2]/input")).click();
 
     }
@@ -105,13 +111,10 @@ public class AppConfiguring {
     @Test (priority = 4)
     public void createJenkinsCreds(){
 
-        try {
-            throw new Exception();
-        } catch (Exception e) {
-            System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*"+"\n");
-            System.out.println(Credentials.buildJenkinsCredentials()+"\n");
-            System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*");
-        }
+            System.err.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*"+"\n");
+            System.err.println(Credentials.buildJenkinsCredentials()+"\n");
+            System.err.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*");
+
 
     }
 }

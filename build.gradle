@@ -46,14 +46,14 @@ void setCredentials() {
         URL = project.property "URL"
     }
     catch(MissingPropertyException e){
-        println "You forgot to set an URL"
+       println "You forgot to set an URL"
     }
 
     try {
         regCode = project.property "REGISTRATION_CODE"
     }
     catch(MissingPropertyException e){
-        println "You forgot to set an CODE"
+        println "You forgot to set a CODE"
     }
 
     StringBuilder creds = new StringBuilder()

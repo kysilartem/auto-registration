@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.AppConfiguring" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-08-28T09:18:43" hostname="DESKTOP-M9LRRON" time="29.564">
+  <properties/>
+  <testcase name="createApp" classname="com.AppConfiguring" time="6.547"/>
+  <testcase name="uploadCertificates" classname="com.AppConfiguring" time="17.111"/>
+  <testcase name="setAdditionalOptions" classname="com.AppConfiguring" time="3.801"/>
+  <testcase name="getCredentials" classname="com.AppConfiguring" time="2.093"/>
+  <testcase name="createJenkinsCreds" classname="com.AppConfiguring" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[авг 28, 2019 12:18:25 PM com.codeborne.selenide.drivercommands.LazyDriver getAndCheckWebDriver
+INFO: No webdriver is bound to current thread: 11 - let's create a new webdriver
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}) on port 1101
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+авг 28, 2019 12:18:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+авг 28, 2019 12:18:30 PM com.codeborne.selenide.webdriver.BrowserResizer adjustBrowserSize
+INFO: Set browser size to 1366x768
+авг 28, 2019 12:18:31 PM com.codeborne.selenide.webdriver.WebDriverFactory logBrowserVersion
+INFO: BrowserName=chrome Version=76.0.3809.100 Platform=XP
+авг 28, 2019 12:18:31 PM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
+INFO: Selenide v. 5.2.8
+авг 28, 2019 12:18:31 PM com.codeborne.selenide.webdriver.WebDriverFactory logSeleniumInfo
+INFO: Selenium WebDriver v. 3.141.59 build time: 2018-11-14T08:17:03
+авг 28, 2019 12:18:31 PM com.codeborne.selenide.drivercommands.CreateDriverCommand createDriver
+INFO: Create webdriver in current thread 11: ChromeDriver -> ChromeDriver: chrome on XP (70af9b27a8be1a842f369e7ab9db7661)
+*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*
+
+Stage5:apistage5.quickblox.com,34,7dHNHBTkmQLb6E2,mFGHA2-jMsO-Xms,test,928b5286a75131eb6832b4b4c1eb710e8f2b26e0,chatstage5.quickblox.com
+
+*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*
+]]></system-err>
+</testsuite>
