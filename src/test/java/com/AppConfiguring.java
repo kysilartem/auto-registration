@@ -118,7 +118,7 @@ public class AppConfiguring {
     public void createJenkinsCreds()  {
 
 
-        Logger logger = LoggerFactory.getLogger(AppConfiguring.class);
+        Logger logger = LoggerFactory.getLogger(Credentials.class);
         logger.info(Credentials.buildJenkinsCredentials());
 
 
