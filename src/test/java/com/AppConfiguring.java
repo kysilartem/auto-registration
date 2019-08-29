@@ -3,9 +3,13 @@ package com;
 import com.codeborne.selenide.Condition;
 import org.apache.commons.logging.impl.SLF4JLog;
 import org.openqa.selenium.By;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.io.FileDescriptor;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.file.Paths;
@@ -111,13 +115,22 @@ public class AppConfiguring {
     }
 
     @Test (priority = 4)
-    public void createJenkinsCreds() throws OutputException {
+    public void createJenkinsCreds()  {
 
-        throw new OutputException(Credentials.buildJenkinsCredentials());
+
+        Logger logger = LoggerFactory.getLogger(AppConfiguring.class);
+        logger.info(Credentials.buildJenkinsCredentials());
+
+
+
+        //throw new OutputException(Credentials.buildJenkinsCredentials());
 
         //System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*"+"\n");
         //System.out.println(Credentials.buildJenkinsCredentials()+"\n");
         //System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*");
 
     }
+
+
+
 }
