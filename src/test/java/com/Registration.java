@@ -32,11 +32,11 @@ public class Registration{
         $(By.xpath("//*[@id=\"signup_terms\"]")).click();
         $(By.xpath("//*[@id=\"signup_submit\"]")).click();
 
-        if ($(By.xpath("//*[@id=\"wrap\"]/div")).exists()){
-            System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).text()+"1");
-            System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).getText()+"2");
-            System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).innerText()+ "TEXT");
-            System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).innerHtml() + "HTML");
+        if ($(By.name("alert alert-danger ")).exists()){
+            System.out.println($(By.name("alert alert-danger ")).text()+"1");
+            System.out.println($(By.name("alert alert-danger ")).getText()+"2");
+            System.out.println($(By.name("alert alert-danger ")).innerText()+ "TEXT");
+            System.out.println($(By.name("alert alert-danger ")).innerHtml() + "HTML");
         }
     }
 
