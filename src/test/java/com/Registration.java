@@ -29,10 +29,14 @@ public class Registration{
         $(By.xpath("//*[@id=\"user_password_confirmation\"]")).setValue(Credentials.getPassword());
         $(By.xpath("//*[@id=\"user_registration_code\"]")).setValue(Credentials.getRegCode());
         $(By.xpath("//*[@id=\"signup_terms\"]")).click();
-
         $(By.xpath("//*[@id=\"signup_submit\"]")).click();
-        $(By.xpath("//*[@id=\"wrap\"]/p[1]")).shouldBe(Condition.visible);
 
+        try {
+            System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).toString());
+        }
+        finally {
+            $(By.xpath("//*[@id=\"wrap\"]/p[1]")).shouldBe(Condition.visible);
+        }
     }
 
 
