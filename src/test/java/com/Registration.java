@@ -32,7 +32,7 @@ public class Registration{
         $(By.xpath("//*[@id=\"signup_terms\"]")).click();
         $(By.xpath("//*[@id=\"signup_submit\"]")).click();
 
-        System.out.println($(By.cssSelector("#wrap > div")).innerHtml());
+        System.out.println($(By.cssSelector("#wrap")).innerHtml());
         System.out.println($(By.cssSelector("#wrap > div")).getSelectedText());
         System.out.println($(By.cssSelector("#wrap > div")).text());
         System.out.println($(By.cssSelector("#wrap > div")).innerText());
