@@ -33,6 +33,7 @@ public class AppConfiguring {
 
     @BeforeClass
     private void setUp () throws IOException {
+        System.out.println("~~~Hello~~~ Artemiy)");
         Registration reg = new Registration();
         reg.fillingTheForm();
         reg.confirmRegistration();
