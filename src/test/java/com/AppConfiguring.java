@@ -8,10 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.io.FileDescriptor;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
 import java.nio.file.Paths;
 
 import static com.codeborne.selenide.Selectors.*;
@@ -119,8 +116,12 @@ public class AppConfiguring {
 
 
         Logger logger = LoggerFactory.getLogger(Credentials.class);
-        logger.info(Credentials.buildJenkinsCredentials());
+        logger.info(Credentials.buildJenkinsCredentials()+ "testsetsetsetsetsetsetsetsetsetsetsetsetsetset");
 
+        try(PrintWriter pw = new PrintWriter(System.out))
+        {
+            pw.println(Credentials.buildJenkinsCredentials()+"Hello world!");
+        }
 
 
         //throw new OutputException(Credentials.buildJenkinsCredentials());
