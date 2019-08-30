@@ -110,7 +110,7 @@ public class AppConfiguring {
     }
 
     @AfterClass
-    public void createJenkinsCreds() throws IOException {
+    public void createJenkinsCreds()  {
 
         System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*"+"\n");
         System.out.println(Credentials.buildJenkinsCredentials()+"\n");
