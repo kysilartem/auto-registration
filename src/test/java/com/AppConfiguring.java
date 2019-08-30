@@ -1,10 +1,8 @@
 package com;
 
 import com.codeborne.selenide.Condition;
-import org.apache.commons.logging.impl.SLF4JLog;
 import org.openqa.selenium.By;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -112,7 +110,7 @@ public class AppConfiguring {
         Credentials.initChatEndpoint();
     }
 
-    @Test (priority = 4)
+    @AfterClass
     public void createJenkinsCreds() throws IOException {
 
         System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*"+"\n");
