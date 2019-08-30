@@ -112,23 +112,11 @@ public class AppConfiguring {
     }
 
     @Test (priority = 4)
-    public void createJenkinsCreds()  {
+    public void createJenkinsCreds() throws IOException {
 
-
-        Logger logger = LoggerFactory.getLogger(Credentials.class);
-        logger.info(Credentials.buildJenkinsCredentials()+ "testsetsetsetsetsetsetsetsetsetsetsetsetsetset");
-
-        try(PrintWriter pw = new PrintWriter(System.out))
-        {
-            pw.println(Credentials.buildJenkinsCredentials()+"Hello world!");
-        }
-
-
-        //throw new OutputException(Credentials.buildJenkinsCredentials());
-
-        //System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*"+"\n");
-        //System.out.println(Credentials.buildJenkinsCredentials()+"\n");
-        //System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*");
+        System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*"+"\n");
+        System.out.println(Credentials.buildJenkinsCredentials()+"\n");
+        System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*");
 
     }
 
