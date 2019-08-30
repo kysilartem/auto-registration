@@ -16,6 +16,7 @@ public class Registration{
 
     public void fillingTheForm() throws IOException {
 
+        System.out.println("HELLO Registration");
         Credentials.initCredentials();
 
         open(Credentials.getUrl());
@@ -36,6 +37,7 @@ public class Registration{
         }
         finally {
             $(By.xpath("//*[@id=\"wrap\"]/p[1]")).shouldBe(Condition.visible);
+
         }
     }
 

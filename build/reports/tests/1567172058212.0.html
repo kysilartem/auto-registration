@@ -1,0 +1,248 @@
+<html lang="en-US"><head>
+<noscript>
+<style>
+  #content { display:none }
+</style>
+</noscript>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-fc330b5913cdd6ec639ee1465d7c3156.ico">
+<link rel="stylesheet" media="screen" href="/assets/qb.main-852ee32ab75e3570dbc424c34b880e6d.css">
+<script src="/assets/qb.generic-a3df419498b6141337adf31aaf10faf0.js"></script>
+<script src="//use.typekit.net/ubp7dtm.js"></script>
+<script src="/assets/signup-797fc987ecf470509cfabb5905f5828a.js"></script>
+
+<title>QuickBlox Admin Panel</title>
+</head>
+<body>
+<script>
+  signin_users_path = '/signin';
+</script>
+<div id="site-wrap">
+<nav class="navbar navbar-default" role="navigation">
+<div class="container">
+<div class="navbar-header pull-left" style="margin-left: 35px;">
+<a class="navbar-brand desktop-only" href="/">QuickBlox Dashboard</a>
+<a class="navbar-brand mobile-only" href="/">Dashboard</a>
+</div>
+<div id="header-logo">
+<a href="http://quickblox.com/">
+<svg id="qbLogo" width="35px" height="35px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <title>Logo</title>
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Logo" fill="#ffffff">
+      <rect id="b1x1" x="0" y="0" width="4.84" height="4.84" rx="0.7"></rect>
+      <rect id="b2x1" x="6.45" y="0" width="4.84" height="4.84" rx="0.7"></rect>
+      <rect id="b3x1" x="12.9" y="0" width="4.84" height="4.84" rx="0.7"></rect>
+      <rect id="b3x2" x="12.9" y="6.45" width="4.84" height="4.84" rx="0.7"></rect>
+      <rect id="b3x3" x="12.9" y="12.9" width="7.1" height="7.1" rx="0.9"></rect>
+      <rect id="b2x3" x="6.45" y="12.9" width="4.84" height="4.84" rx="0.7"></rect>
+      <rect id="b1x3" x="0" y="12.9" width="4.84" height="4.84" rx="0.7"></rect>
+      <rect id="b1x2" x="0" y="6.45" width="4.84" height="4.84" rx="0.7"></rect>
+    </g>
+  </g>
+</svg>
+
+</a>
+</div>
+<div class="pull-right" id="header-menu">
+<div class="dropdown">
+<a aria-expanded="true" data-toggle="dropdown" href="#" id="login_dropdown">
+<img style="margin-top: -3px;" src="/assets/new/placeholder-0935c31b047f4d15135df5369a9453f1.svg" alt="Placeholder">
+</a>
+<ul aria-lebelledby="login_dropdown" class="dropdown-menu pull-right" role="menu">
+<li><a title="Login" href="/signin">Login</a></li>
+<li><a title="Register" href="/register">Register</a></li>
+<li><a title="Forgot password" href="/forgot">Forgot password</a></li>
+<li><a target="_blank" title="Documentation" href="http://quickblox.com/developers">Documentation</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+</nav>
+
+<div class="breadcrumb-wrap">
+<div class="container">
+<ul class="breadcrumb">
+<li id="link_home">
+<a href="/apps">
+<img src="/assets/new/home-24ec615cc681b7683edee567a97d120c.svg" alt="Home">
+</a>
+</li>
+<li>Register account</li>
+
+</ul>
+</div>
+</div>
+
+<noscript>
+	<div id="content" class="content_noscript">
+		<h2 id="content-title">You need to change a setting in your web browser</h2>
+		<div class="fullwidth_noscript apps">
+			<p>QuickBlox admin panel requires a browser feature called <strong>JavaScript</strong>. All modern browsers support JavaScript. You probably just need to change a setting in order to turn it on.</p>
+			<p>Please see: <a href="http://www.google.com/support/bin/answer.py?answer=23852">How to enable JavaScript in your browser</a>.</p>
+			<p>If you use ad-blocking software, it may require you to allow JavaScript from quickblox.com.</p>
+			<p>Once you've enabled JavaScript you can try to load this page again</a>.</p>
+			<p>Thank you!</p>
+		</div>
+	</div>
+</noscript>
+<!-- main content -->
+<div class="container qb-container" id="content">
+<!-- deprecated, new in workspace block -->
+<div class="clear-when-loading" id="below-title"></div>
+<div id="workspace">
+<style>
+  .container {
+    width: 1140px
+  }
+</style>
+<div class="row" id="reg-block">
+<div class="col-md-12 col-xs-12">
+<div class="panel panel-default">
+<div class="panel-body">
+<h3 class="panel-title">Register your account</h3>
+<div class="row login-wrap margin-top-20">
+<div class="col-sm-7" id="wrap" style="display: block;"><div class="alert alert-danger">
+<h4>Errors:</h4>
+<p>Email has already been taken.</p>
+<p>Login has already been taken</p>
+</div>
+<form id="signupForm" class="login-form form-horizontal" action="/accounts" accept-charset="UTF-8" method="post" novalidate="novalidate"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="941xkS+hjzh3G1e6LxYqsNNaD0j9FDy1F1oJGCnj/mgfq7/2TUuwRGpv2ifamcgGyO7SOc7k7rXqUDm3ZN4r1w=="><style>
+  span.error
+  {
+    display: block !important;
+  }
+</style>
+<input value="true" type="hidden" name="user[age_over16]" id="user_age_over16">
+<div class="form-group">
+<label class="col-sm-3 control-label" for="user_full_name">* Full&nbsp;name</label>
+<div class="col-sm-9">
+<input class="form-control" required="required" type="text" value="test test" name="user[full_name]" id="user_full_name" aria-required="true">
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-3 control-label" for="user_email">*&nbsp;Email</label>
+<div class="col-sm-9">
+<div class="field_with_errors"><input class="form-control" required="required" type="text" value="qb.automated.team@gmail.com" name="user[email]" id="user_email" aria-required="true"></div>
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-3 control-label" for="user_login">*&nbsp;Login</label>
+<div class="col-sm-9">
+<div class="field_with_errors"><input class="form-control" required="required" type="text" value="test" name="user[login]" id="user_login" aria-required="true"></div>
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-3 control-label" for="user_password">*&nbsp;Password</label>
+<div class="col-sm-9">
+<input class="form-control" required="required" type="password" name="user[password]" id="user_password" aria-required="true">
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-3 control-label" for="user_password_confirmation">*&nbsp;Repeat&nbsp;password</label>
+<div class="col-sm-9">
+<input class="form-control" required="required" type="password" name="user[password_confirmation]" id="user_password_confirmation" aria-required="true">
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-3 control-label" for="user_phone">Phone</label>
+<div class="col-sm-9">
+<input class="form-control" type="text" value="" name="user[phone]" id="user_phone">
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-3 control-label" for="user_website">Website</label>
+<div class="col-sm-9">
+<input class="form-control" type="text" name="user[website]" id="user_website">
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-3 control-label" for="company">Company</label>
+<div class="col-sm-9">
+<input size="100" class="form-control" type="text" value="" name="user[company]" id="user_company">
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-3 control-label" for="registration_code">* Registration code</label>
+<div class="col-sm-9">
+<input class="form-control" required="required" type="text" value="CZAXAQ" name="user[registration_code]" id="user_registration_code" aria-required="true">
+</div>
+</div>
+<div class="form-group" id="allow_statistics">
+<label class="col-sm-3 control-label" style="padding-top: 0;" for="user_allow_statistics_analysis">Allow usage statistics analysis</label>
+<div class="col-sm-9">
+<input name="user[allow_statistics_analysis]" type="hidden" value="0"><input type="checkbox" value="1" name="user[allow_statistics_analysis]" id="user_allow_statistics_analysis">
+</div>
+</div>
+<div class="form-group" id="allow_sales_activities">
+<label class="col-sm-3 control-label" style="padding-top: 0;" for="user_allow_sales_activities">Allow sales activities</label>
+<div class="col-sm-9">
+<input name="user[allow_sales_activities]" type="hidden" value="0"><input type="checkbox" value="1" name="user[allow_sales_activities]" id="user_allow_sales_activities">
+</div>
+</div>
+<div class="form-group text-center">
+<input id="signup_terms" name="signup_terms" type="checkbox">
+<label for="signup_terms" id="signup_terms_accept_label">
+I accept
+<a href="/terms" target="_blank">Terms and Conditions</a>
+</label>
+<div class="form-group">
+<div class="col-sm-3"></div>
+<div class="col-sm-9">
+<button name="button" type="submit" id="signup_submit">Sign Me Up!</button>
+</div>
+</div>
+</div>
+
+</form>
+</div>
+<div class="col-xs-5 register-logo"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="loading" style="display: none;">
+<div class="text">We are processing your request</div>
+<div class="loader">
+<img src="https://adminstage5.quickblox.com/assets/loading-93ae4eb14d847d589b3831f6ec1e9f23.gif">
+</div>
+</div>
+
+</div>
+<!-- #workspace -->
+
+</div>
+</div>
+<div id="footer">
+<footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-xs-4">
+<div id="poweredbyqb">Powered by Quickblox</div>
+</div>
+<div class="col-xs-4">
+<div id="mrquick">
+68775ce, 3.19.07.4-enterprise @ 2019-08-16 09:35:03 UTC
+</div>
+</div>
+<div class="col-xs-4">
+<div class="copyright">
+2019 ©
+<br class="phones-only">QuickBlox Ltd.<br>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<script>
+  try {
+    Typekit.load();
+  } catch (e) {}
+</script>
+
+
+</body></html>

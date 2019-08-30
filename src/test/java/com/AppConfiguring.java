@@ -31,6 +31,7 @@ public class AppConfiguring {
 
     @BeforeClass
     private void setUp () throws IOException {
+        System.out.println("APPConfiguring.class");
         Registration reg = new Registration();
         reg.fillingTheForm();
         reg.confirmRegistration();
