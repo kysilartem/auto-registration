@@ -30,7 +30,7 @@ public class AppConfiguring {
 
 
     @BeforeClass
-    private void setUp () throws IOException {
+    private void setUp () throws IOException, InterruptedException {
         Registration reg = new Registration();
         reg.fillingTheForm();
         reg.confirmRegistration();
