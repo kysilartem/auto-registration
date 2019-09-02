@@ -46,8 +46,8 @@ public class AppConfiguring {
     $(By.xpath("//*[@id=\"facebook_secret\"]")).setValue(FB_SECRET);
     $(By.xpath("//*[@id=\"twitter_key\"]")).setValue(TWITTER_KEY);
     $(By.xpath("//*[@id=\"twitter_secret\"]")).setValue(TWITTER_SECRET);
-    $(By.xpath("//*[@id=\"form-add-app\"]/div[4]/div/div/button")).click();
-    Thread.sleep(2500);
+    $(By.xpath("//*[@id=\"form-add-app\"]/div[4]/div/div/button")).waitUntil(Condition.visible,2500).click();
+    //Thread.sleep(2500);
     }
 
     @Test (priority = 1,dependsOnMethods = "createApp")
@@ -64,11 +64,11 @@ public class AppConfiguring {
 
         $(By.xpath("//*[@id=\"upload_cert_password\"]")).setValue(VOIP_CERTIFICATE_PASSWORD);
         $(By.xpath("//*[@id=\"upload_cert\"]")).sendKeys(Paths.get(VOIP_CERTIFICATE_PATH).toAbsolutePath().toString());
-        $(By.xpath("//*[@id=\"upload_submit\"]")).click();
-        Thread.sleep(2000);
+        $(By.xpath("//*[@id=\"upload_submit\"]")).waitUntil(Condition.visible,2500).click();
+        //Thread.sleep(2000);
 
-        $(byAttribute("data-target","#gcm")).click();
-        Thread.sleep(1000);
+        $(byAttribute("data-target","#gcm")).waitUntil(Condition.visible,2500).click();
+        //Thread.sleep(1000);
         $(By.xpath("//*[@id=\"gcm_api_key\"]")).shouldBe(Condition.visible).setValue(GCM_KEY);
         $(By.xpath("//*[@id=\"google_submit\"]")).click();
 
@@ -112,9 +112,11 @@ public class AppConfiguring {
     @AfterClass
     public void createJenkinsCreds()  {
 
+        System.out.println("\n");
         System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*"+"\n");
         System.out.println(Credentials.buildJenkinsCredentials()+"\n");
         System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*");
+        System.out.println("\n");
 
     }
 

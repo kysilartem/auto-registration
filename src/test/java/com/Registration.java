@@ -1,8 +1,6 @@
 package com;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.impl.Waiter;
 import org.openqa.selenium.By;
 
 import java.io.IOException;
@@ -35,7 +33,9 @@ public class Registration{
 
 
         System.out.println("\n");
+        System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*"+"\n");
         System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).waitUntil(Condition.appear, 3000).innerHtml());
+        System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*");
         System.out.println("\n");
     }
 
