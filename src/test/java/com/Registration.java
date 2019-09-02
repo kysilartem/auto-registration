@@ -14,7 +14,7 @@ public class Registration{
 
 
 
-    public void fillingTheForm() throws IOException {
+    public void fillingTheForm() throws IOException, InterruptedException {
 
         System.out.println("HELLO Registration");
         Credentials.initCredentials();
@@ -31,6 +31,8 @@ public class Registration{
         $(By.xpath("//*[@id=\"user_registration_code\"]")).setValue(Credentials.getRegCode());
         $(By.xpath("//*[@id=\"signup_terms\"]")).click();
         $(By.xpath("//*[@id=\"signup_submit\"]")).click();
+
+        Thread.sleep(1500);
 
         System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).innerHtml());
         System.out.println($(By.cssSelector("//*[@id=\"wrap\"]/div")).getSelectedText());
