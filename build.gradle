@@ -64,7 +64,7 @@ void setCredentials() {
             .append("\"").append("regCode").append("\"").append(":").append("\"").append(regCode).append("\"").append(",").append("\n")
             .append("\"").append("fullName").append("\"").append(":").append("\"").append("test test").append("\"").append(",").append("\n")
             .append("\"").append("email").append("\"").append(":").append("\"").append("qb.automated.team@gmail.com").append("\"").append(",").append("\n")
-            .append("\"").append("login").append("\"").append(":").append("\"").append("test").append("\"").append("\n").append("}")
+            .append("\"").append("login").append("\"").append(":").append("\"").append("test123456").append("\"").append("\n").append("}")
     
     File file = new File(filePath)
     file.write(creds.toString())
