@@ -33,11 +33,9 @@ public class Registration{
         $(By.xpath("//*[@id=\"signup_terms\"]")).click();
         $(By.xpath("//*[@id=\"signup_submit\"]")).click();
 
-        Waiter pause = new Waiter();
-        pause.wait(1500);
 
         System.out.println("\n");
-        System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).innerHtml());
+        System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).waitUntil(Condition.appear, 3000).innerHtml());
         System.out.println("\n");
     }
 
