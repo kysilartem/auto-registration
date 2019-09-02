@@ -1,6 +1,8 @@
 package com;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.impl.Waiter;
 import org.openqa.selenium.By;
 
 import java.io.IOException;
@@ -31,10 +33,10 @@ public class Registration{
         $(By.xpath("//*[@id=\"signup_terms\"]")).click();
         $(By.xpath("//*[@id=\"signup_submit\"]")).click();
 
+        Waiter pause = new Waiter();
+        pause.wait(1500);
 
-        //Thread.sleep(1500);
         System.out.println("\n");
-        wait(1000);
         System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).innerHtml());
         System.out.println("\n");
     }

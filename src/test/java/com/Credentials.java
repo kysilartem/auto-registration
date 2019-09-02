@@ -1,5 +1,6 @@
 package com;
 
+import com.codeborne.selenide.impl.Waiter;
 import com.jayway.restassured.path.json.JsonPath;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.openqa.selenium.By;
