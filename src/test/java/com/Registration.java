@@ -33,13 +33,9 @@ public class Registration{
         $(By.xpath("//*[@id=\"signup_submit\"]")).click();
 
         Thread.sleep(1500);
-
+        System.out.println("\n");
         System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).innerHtml());
-        System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).getSelectedText());
-        System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).text());
-        System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).innerText());
-        System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).getText());
-        System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")));
+        System.out.println("\n");
     }
 
 
