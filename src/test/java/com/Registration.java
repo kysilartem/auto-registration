@@ -35,11 +35,11 @@ public class Registration{
         Thread.sleep(1500);
 
         System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).innerHtml());
-        System.out.println($(By.cssSelector("//*[@id=\"wrap\"]/div")).getSelectedText());
-        System.out.println($(By.cssSelector("#wrap > div")).text());
-        System.out.println($(By.cssSelector("#wrap > div")).innerText());
-        System.out.println($(By.cssSelector("#wrap > div")).getText());
-        System.out.println($(By.xpath("//p[contains(@class, \"alert alert-danger\")]")));
+        System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).getSelectedText());
+        System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).text());
+        System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).innerText());
+        System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).getText());
+        System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")));
     }
 
 
