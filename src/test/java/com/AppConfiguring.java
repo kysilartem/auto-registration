@@ -1,8 +1,6 @@
 package com;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -65,16 +63,6 @@ public class AppConfiguring {
             Assert.fail("ACCOUNT ALREADY EXIST");
         }
     }
-
-//    @Test (dependsOnMethods = "confirmRegistration")
-//    public void login(){
-//
-//    //open(Credentials.getUrl());
-//    $(byXpath("//*[@id=\"user_login\"]")).setValue(Credentials.getLogin());
-//    $(byXpath("//*[@id=\"user_password\"]")).setValue(Credentials.getPassword());
-//    $(byXpath("//*[@id=\"signin_submit\"]")).click();
-//
-//    }
 
     @Test (dependsOnMethods = "confirmRegistration")
     public void createApp() throws InterruptedException {

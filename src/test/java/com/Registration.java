@@ -29,6 +29,7 @@ public class Registration{
         $(By.xpath("//*[@id=\"user_password_confirmation\"]")).setValue(Credentials.getPassword());
         $(By.xpath("//*[@id=\"user_registration_code\"]")).setValue(Credentials.getRegCode());
         $(By.xpath("//*[@id=\"signup_terms\"]")).click();
+        Thread.sleep(1500);
         $(By.xpath("//*[@id=\"signup_submit\"]")).click();
 
     }
