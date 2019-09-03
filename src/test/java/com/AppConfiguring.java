@@ -86,7 +86,6 @@ public class AppConfiguring {
     $(byXpath("//*[@id=\"facebook_secret\"]")).setValue(FB_SECRET);
     $(byXpath("//*[@id=\"twitter_key\"]")).setValue(TWITTER_KEY);
     $(byXpath("//*[@id=\"twitter_secret\"]")).setValue(TWITTER_SECRET);
-    $(byXpath(("//*[@id=\"signup_terms\"]"))).waitUntil(Condition.visible,5000).click();
     $(byXpath("//*[@id=\"form-add-app\"]/div[4]/div/div/button")).click();
 
     Thread.sleep(1000);
