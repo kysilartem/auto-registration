@@ -31,12 +31,6 @@ public class Registration{
         $(By.xpath("//*[@id=\"signup_terms\"]")).click();
         $(By.xpath("//*[@id=\"signup_submit\"]")).click();
 
-
-        System.out.println("\n");
-        System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*"+"\n");
-        System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).waitUntil(Condition.appear, 3000).innerHtml());
-        System.out.println("*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*");
-        System.out.println("\n");
     }
 
 

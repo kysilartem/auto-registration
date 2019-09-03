@@ -5,10 +5,12 @@
     <classes>
       <class name="com.AppConfiguring">
         <methods>
+          <include name="checkThatAccountExists"/>
           <include name="createJenkinsCreds"/>
-          <include name="setUp"/>
+          <include name="confirmRegistration"/>
           <include name="uploadCertificates"/>
           <include name="getCredentials"/>
+          <include name="registration"/>
           <include name="setAdditionalOptions"/>
           <include name="createApp"/>
         </methods>
