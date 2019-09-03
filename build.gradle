@@ -8,9 +8,9 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 test {
-    testLogging.showStandardStreams = true
+    //testLogging.showStandardStreams = true
     useTestNG() {
-        setCredentials()
+        //setCredentials()
         useDefaultListeners = true
         suites 'src/test/resources/suite.xml'
     }

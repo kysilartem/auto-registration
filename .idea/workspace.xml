@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dec08843-602e-400f-a686-e9680742981f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/AppConfiguring.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/AppConfiguring.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/Registration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1567173293961.0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/1567173293961.0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/Suite/GeneratingCredentialsForJenkins.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/Suite/GeneratingCredentialsForJenkins.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/Suite/GeneratingCredentialsForJenkins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/Suite/GeneratingCredentialsForJenkins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/Suite/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/Suite/testng-failed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/emailable-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/junitreports/TEST-com.AppConfiguring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/junitreports/TEST-com.AppConfiguring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/old/Suite/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/old/Suite/classes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/old/Suite/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/old/Suite/methods-alphabetical.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/old/Suite/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/old/Suite/methods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/old/Suite/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/old/Suite/toc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/old/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/testng-failed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/testng-results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/credentials.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/credentials.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/AppConfiguring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/AppConfiguring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Credentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Registration.java" afterDir="false" />
-    </list>
+    <list default="true" id="dec08843-602e-400f-a686-e9680742981f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -75,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/Credentials.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-391">
+            <state relative-caret-position="-797">
               <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -84,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/AppConfiguring.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+            <state relative-caret-position="1173">
+              <caret line="100" column="29" lean-forward="true" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-740">
+            <state relative-caret-position="-270">
               <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
             </state>
           </provider>
@@ -146,12 +112,12 @@
         <option value="$PROJECT_DIR$/src/test/resources/credentials.json" />
         <option value="$PROJECT_DIR$/src/test/java/com/Credentials.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/Registration.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/AppConfiguring.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/test/java/com/AppConfiguring.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1358" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -212,7 +178,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567497387489" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567497947328" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -417,7 +383,7 @@
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -426,12 +392,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.5222222" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.5222222" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2911111" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4989339" weight="0.21222222" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4989339" visible="true" weight="0.5322222" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Build" order="10" sideWeight="0.49946696" weight="0.34333333" />
@@ -452,13 +418,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/AppConfiguring.java</url>
-          <line>44</line>
+          <line>46</line>
           <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/AppConfiguring.java</url>
-          <line>52</line>
+          <line>54</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
@@ -572,16 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/Credentials.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -741,20 +697,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/AppConfiguring.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        <state relative-caret-position="-270">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/Credentials.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-797">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/AppConfiguring.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-740">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="1173">
+          <caret line="100" column="29" lean-forward="true" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
