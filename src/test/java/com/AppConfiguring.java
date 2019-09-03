@@ -1,6 +1,7 @@
 package com;
 
 import com.codeborne.selenide.Condition;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -40,13 +41,13 @@ public class AppConfiguring {
 
         Thread.sleep(3500);
 
-        if ($(byXpath("//*[@id=\"wrap\"]/p[1]")).exists()) {
+        if ($(By.xpath("//*[@id=\"wrap\"]/p[1]")).exists()) {
             check = true;
             close();
 
-        } else if ($(byXpath("//*[@id=\"wrap\"]/div")).exists()) {
+        } else if ($(By.xpath("//*[@id=\"wrap\"]/div")).exists()) {
             System.out.println("\n");
-            System.out.println($(byXpath("//*[@id=\"wrap\"]/div")).innerHtml());
+            System.out.println($(By.xpath("//*[@id=\"wrap\"]/div")).innerHtml());
             System.out.println("\n");
         }
 
@@ -67,14 +68,14 @@ public class AppConfiguring {
     @Test (dependsOnMethods = "confirmRegistration")
     public void createApp() throws InterruptedException {
 
-    $(byXpath("//*[@id=\"workspace\"]/div/div/div/div/ul/li/a")).click();
-    $(byXpath("//*[@id=\"application_title\"]")).setValue(APP_NAME);
-    $(byXpath("//*[@id=\"avatar_file\"]")).sendKeys(Paths.get(IMG_PATH).toAbsolutePath().toString());
-    $(byXpath("//*[@id=\"facebook_key\"]")).setValue(FB_ID);
-    $(byXpath("//*[@id=\"facebook_secret\"]")).setValue(FB_SECRET);
-    $(byXpath("//*[@id=\"twitter_key\"]")).setValue(TWITTER_KEY);
-    $(byXpath("//*[@id=\"twitter_secret\"]")).setValue(TWITTER_SECRET);
-    $(byXpath("//*[@id=\"form-add-app\"]/div[4]/div/div/button")).click();
+    $(By.xpath("//*[@id=\"workspace\"]/div/div/div/div/ul/li/a")).click();
+    $(By.xpath("//*[@id=\"application_title\"]")).setValue(APP_NAME);
+    $(By.xpath("//*[@id=\"avatar_file\"]")).sendKeys(Paths.get(IMG_PATH).toAbsolutePath().toString());
+    $(By.xpath("//*[@id=\"facebook_key\"]")).setValue(FB_ID);
+    $(By.xpath("//*[@id=\"facebook_secret\"]")).setValue(FB_SECRET);
+    $(By.xpath("//*[@id=\"twitter_key\"]")).setValue(TWITTER_KEY);
+    $(By.xpath("//*[@id=\"twitter_secret\"]")).setValue(TWITTER_SECRET);
+    $(By.xpath("//*[@id=\"form-add-app\"]/div[4]/div/div/button")).click();
 
     Thread.sleep(1000);
     close();
@@ -84,32 +85,32 @@ public class AppConfiguring {
     public void uploadCertificates() throws InterruptedException {
 
         open(Credentials.getUrl() + "/apps");
-        $(byXpath("//*[@id=\"user_login\"]")).setValue(Credentials.getLogin());
-        $(byXpath("//*[@id=\"user_password\"]")).setValue(Credentials.getPassword());
-        $(byXpath("//*[@id=\"signin_submit\"]")).click();
+        $(By.xpath("//*[@id=\"user_login\"]")).setValue(Credentials.getLogin());
+        $(By.xpath("//*[@id=\"user_password\"]")).setValue(Credentials.getPassword());
+        $(By.xpath("//*[@id=\"signin_submit\"]")).click();
         //Selenide.refresh();
 
         $(byAttribute("title",APP_NAME)).waitUntil(Condition.appear,10000).click();
-        $(byXpath("//*[@id=\"app-list\"]/a[5]/i")).click();
+        $(By.xpath("//*[@id=\"app-list\"]/a[5]/i")).click();
 
-        $(byXpath("//*[@id=\"workspace\"]/div[1]/div[2]/div[1]/ul/li[4]/a")).click();
-        $(byXpath(".//*[@id='upload_cert_password']")).setValue(APNS_CERTIFICATE_PASSWORD);
-        $(byXpath("//*[@id=\"upload_cert\"]")).sendKeys(Paths.get(APNS_CERTIFICATE_PATH).toAbsolutePath().toString());
-        $(byXpath("//*[@id=\"upload_submit\"]")).click();
+        $(By.xpath("//*[@id=\"workspace\"]/div[1]/div[2]/div[1]/ul/li[4]/a")).click();
+        $(By.xpath(".//*[@id='upload_cert_password']")).setValue(APNS_CERTIFICATE_PASSWORD);
+        $(By.xpath("//*[@id=\"upload_cert\"]")).sendKeys(Paths.get(APNS_CERTIFICATE_PATH).toAbsolutePath().toString());
+        $(By.xpath("//*[@id=\"upload_submit\"]")).click();
 
-        $(byXpath("//*[@id=\"upload_cert_password\"]")).setValue(VOIP_CERTIFICATE_PASSWORD);
-        $(byXpath("//*[@id=\"upload_cert\"]")).sendKeys(Paths.get(VOIP_CERTIFICATE_PATH).toAbsolutePath().toString());
-        $(byXpath("//*[@id=\"upload_submit\"]")).waitUntil(Condition.exist,2500).click();
+        $(By.xpath("//*[@id=\"upload_cert_password\"]")).setValue(VOIP_CERTIFICATE_PASSWORD);
+        $(By.xpath("//*[@id=\"upload_cert\"]")).sendKeys(Paths.get(VOIP_CERTIFICATE_PATH).toAbsolutePath().toString());
+        $(By.xpath("//*[@id=\"upload_submit\"]")).waitUntil(Condition.exist,2500).click();
 
 
         $(byAttribute("data-target","#gcm")).waitUntil(Condition.exist,2500).click();
 
-        $(byXpath("//*[@id=\"gcm_api_key\"]")).shouldBe(Condition.visible).setValue(GCM_KEY);
-        $(byXpath("//*[@id=\"google_submit\"]")).click();
+        $(By.xpath("//*[@id=\"gcm_api_key\"]")).shouldBe(Condition.visible).setValue(GCM_KEY);
+        $(By.xpath("//*[@id=\"google_submit\"]")).click();
 
-        $(byXpath("//*[@id=\"gcm_environment_production\"]")).click();
-        $(byXpath("//*[@id=\"gcm_api_key\"]")).shouldBe(Condition.visible).setValue(GCM_KEY);
-        $(byXpath("//*[@id=\"google_submit\"]")).click();
+        $(By.xpath("//*[@id=\"gcm_environment_production\"]")).click();
+        $(By.xpath("//*[@id=\"gcm_api_key\"]")).shouldBe(Condition.visible).setValue(GCM_KEY);
+        $(By.xpath("//*[@id=\"google_submit\"]")).click();
 
     }
 
@@ -119,16 +120,16 @@ public class AppConfiguring {
 
         open(Credentials.getUrl() + "/apps");
         $(byAttribute("title",APP_NAME)).click();
-        $(byXpath("//*[@id=\"app-list\"]/a[6]")).click();
-        $(byXpath("//*[@id=\"list\"]/div[1]/ul/li[3]/a")).click();
+        $(By.xpath("//*[@id=\"app-list\"]/a[6]")).click();
+        $(By.xpath("//*[@id=\"list\"]/div[1]/ul/li[3]/a")).click();
 
-        if ($(byXpath("//*[@id=\"users_settings_users_index\"]")).getAttribute("checked")==null){
-            $(byXpath("//*[@id=\"users_settings_users_index\"]")).click();
+        if ($(By.xpath("//*[@id=\"users_settings_users_index\"]")).getAttribute("checked")==null){
+            $(By.xpath("//*[@id=\"users_settings_users_index\"]")).click();
         }
-        if($(byXpath("//*[@id=\"users_settings_new_user_push_enable\"]")).getAttribute("checked")==null) {
-            $(byXpath("//*[@id=\"users_settings_new_user_push_enable\"]")).click();
+        if($(By.xpath("//*[@id=\"users_settings_new_user_push_enable\"]")).getAttribute("checked")==null) {
+            $(By.xpath("//*[@id=\"users_settings_new_user_push_enable\"]")).click();
         }
-        $(byXpath("//*[@id=\"form-add-app\"]/div/div/div[3]/div[2]/div[2]/input")).click();
+        $(By.xpath("//*[@id=\"form-add-app\"]/div/div/div[3]/div[2]/div[2]/input")).click();
 
     }
 
@@ -139,8 +140,8 @@ public class AppConfiguring {
         Credentials.initAppId();
         Credentials.initAuthKey();
         Credentials.initSecretKey();
-        $(byXpath("//*[@id=\"login_dropdown\"]/img")).click();
-        $(byXpath("//*[@id=\"header-menu\"]/div/ul/li[3]/a")).shouldBe(Condition.visible).click();
+        $(By.xpath("//*[@id=\"login_dropdown\"]/img")).click();
+        $(By.xpath("//*[@id=\"header-menu\"]/div/ul/li[3]/a")).shouldBe(Condition.visible).click();
         Credentials.initApiEndpoint();
         Credentials.initChatEndpoint();
     }
