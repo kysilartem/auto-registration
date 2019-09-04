@@ -1,7 +1,13 @@
 package com;
 
+import com.jayway.restassured.path.json.JsonPath;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.openqa.selenium.By;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 import static com.codeborne.selenide.Selenide.$;
 
 public class Credentials {
@@ -19,7 +25,6 @@ public class Credentials {
     private static String secretKey;
     private static String apiEndpoint;
     private static String chatEndpoint;
-
 
 
     static String getInstanceName() {
@@ -78,92 +83,99 @@ public class Credentials {
         Credentials.regCode = regCode;
     }
 
-    public static String getAppId() {
+    static String getAppId() {
         return appId;
     }
 
-    public static void setAppId(String appId) {
+    static void setAppId(String appId) {
         Credentials.appId = appId;
     }
 
-    public static String getAuthKey() {
+    static String getAuthKey() {
         return authKey;
     }
 
-    public static void setAuthKey(String authKey) {
+    static void setAuthKey(String authKey) {
         Credentials.authKey = authKey;
     }
 
-    public static String getSecretKey() {
+    static String getSecretKey() {
         return secretKey;
     }
 
-    public static void setSecretKey(String secretKey) {
+    static void setSecretKey(String secretKey) {
         Credentials.secretKey = secretKey;
     }
 
-    public static String getApiEndpoint() {
+    static String getApiEndpoint() {
         return apiEndpoint;
     }
 
-    public static void setApiEndpoint(String apiEndpoint) {
+    static void setApiEndpoint(String apiEndpoint) {
         Credentials.apiEndpoint = apiEndpoint;
     }
 
-    public static String getChatEndpoint() {
+    static String getChatEndpoint() {
         return chatEndpoint;
     }
 
-    public static void setChatEndpoint(String chatEndpoint) {
+    static void setChatEndpoint(String chatEndpoint) {
         Credentials.chatEndpoint = chatEndpoint;
     }
 
 
-    static void initCredentials() {
+    static void initCredentials() throws IOException {
 
-        setInstanceName("STAGE");
-        setUrl("https://adminstage5.quickblox.com");
-        setFullName("test test");
-        setEmail("qb.automated.team@gmail.com");
-        setLogin("test777");
-        setPassword(DigestUtils.sha1Hex ("Fishki123"));
-        setRegCode("CZAXAQ");
+        //read JSON file
+        String credentials = new String(Files.readAllBytes(Paths.get("src/test/resources/credentials.json")));
+        JsonPath jsonPath = new JsonPath(credentials);
+
+        //set values to variables
+        setInstanceName(jsonPath.getString("instance"));
+        setUrl(jsonPath.getString("url"));
+        setFullName(jsonPath.getString("fullName"));
+        setEmail(jsonPath.getString("email"));
+        setLogin(jsonPath.getString("login"));
+        setPassword(DigestUtils.sha1Hex (getUrl().substring(8)+"18!new!update"));
+        setRegCode(jsonPath.getString("regCode"));
+
     }
 
 
-    public static void initAppId(){
+    static void initAppId(){
 
         setAppId($(By.xpath("//*[@id=\"app_id\"]")).getAttribute("value"));
 
     }
 
-    public static void initAuthKey(){
+    static void initAuthKey(){
 
         setAuthKey($(By.xpath("//*[@id=\"app_auth_key\"]")).getAttribute("value"));
 
     }
 
-    public static void initSecretKey (){
+    static void initSecretKey(){
 
         setSecretKey($(By.xpath("//*[@id=\"app_auth_secret\"]")).getAttribute("value"));
 
     }
 
-    public static void initApiEndpoint() {
+    static void initApiEndpoint() {
 
         setApiEndpoint($(By.xpath("//*[@id=\"qb_api\"]")).getAttribute("value").substring(8));
 
     }
 
-    public static void initChatEndpoint () {
+    static void initChatEndpoint() {
 
         setChatEndpoint($(By.xpath("//*[@id=\"chat_api\"]")).getAttribute("value"));
 
     }
 
 
-    public static String buildJenkinsCredentials(){
+    static String buildJenkinsCredentials(){
 
+        //create string with credentials
         StringBuilder jenkinsCreds = new StringBuilder();
         jenkinsCreds.append(getInstanceName()).append(":").append(apiEndpoint).append(",").append(appId).append(",").append(authKey).append(",").append(secretKey).append(",").append(getLogin()).append(",").append(getPassword()).append(",").append(chatEndpoint);
         return jenkinsCreds.toString();
