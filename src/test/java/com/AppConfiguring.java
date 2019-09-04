@@ -32,11 +32,15 @@ public class AppConfiguring {
     private boolean check = false;
 
     @BeforeClass
-    private void setUp(){Configuration.headless = true;}
+    private void setUp(){
+
+        Configuration.driverManagerEnabled =true;
+        Configuration.headless = true;
+
+    }
 
     @Test
     public void registration () throws IOException, InterruptedException {
-        Configuration.headless = true;
         Registration reg = new Registration();
         reg.fillingTheForm();
     }
