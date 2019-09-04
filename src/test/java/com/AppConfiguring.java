@@ -34,8 +34,10 @@ public class AppConfiguring {
     @BeforeClass
     private void setUp(){
 
-        Configuration.driverManagerEnabled =true;
+        Configuration.browserBinary = ".src\\test\\resources\\chromedriver";
+        Configuration.driverManagerEnabled = true;
         Configuration.headless = true;
+
 
     }
 
