@@ -36,6 +36,7 @@ public class AppConfiguring {
 
     @Test
     public void registration () throws IOException, InterruptedException {
+        Configuration.headless = true;
         Registration reg = new Registration();
         reg.fillingTheForm();
     }
