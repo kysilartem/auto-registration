@@ -16,12 +16,15 @@ public class Registration{
 
     public void fillingTheForm() throws IOException, InterruptedException {
 
+        //read credentials from JSON file
         Credentials.initCredentials();
 
+        //open the page and go to the registration form
         open(Credentials.getUrl());
         $(By.xpath("//*[@id=\"login-block\"]/div/div/div/p/a")).click();
         $(By.xpath("//*[@id=\"reg-block\"]/div/div/div/h3")).shouldBe(Condition.visible);
 
+        //filling and submit form
         $(By.xpath("//*[@id=\"user_full_name\"]")).setValue(Credentials.getFullName());
         $(By.xpath("//*[@id=\"user_email\"]")).setValue(Credentials.getEmail());
         $(By.xpath("//*[@id=\"user_login\"]")).setValue(Credentials.getLogin());
@@ -29,7 +32,7 @@ public class Registration{
         $(By.xpath("//*[@id=\"user_password_confirmation\"]")).setValue(Credentials.getPassword());
         $(By.xpath("//*[@id=\"user_registration_code\"]")).setValue(Credentials.getRegCode());
         $(By.xpath("//*[@id=\"signup_terms\"]")).click();
-        Thread.sleep(1500);
+        Thread.sleep(1000);
         $(By.xpath("//*[@id=\"signup_submit\"]")).click();
 
     }
