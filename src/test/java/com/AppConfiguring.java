@@ -105,11 +105,11 @@ public class AppConfiguring {
 
         $(byAttribute("data-target","#gcm")).waitUntil(Condition.exist,2500).click();
 
-        $(By.xpath("//*[@id=\"gcm_api_key\"]")).shouldBe(Condition.visible).setValue(GCM_KEY);
+        $(By.xpath("//*[@id=\"gcm_api_key\"]")).setValue(GCM_KEY);
         $(By.xpath("//*[@id=\"google_submit\"]")).click();
 
         $(By.xpath("//*[@id=\"gcm_environment_production\"]")).click();
-        $(By.xpath("//*[@id=\"gcm_api_key\"]")).shouldBe(Condition.visible).setValue(GCM_KEY);
+        $(By.xpath("//*[@id=\"gcm_api_key\"]")).setValue(GCM_KEY);
         $(By.xpath("//*[@id=\"google_submit\"]")).click();
 
     }
@@ -141,7 +141,7 @@ public class AppConfiguring {
         Credentials.initAuthKey();
         Credentials.initSecretKey();
         $(By.xpath("//*[@id=\"login_dropdown\"]/img")).click();
-        $(By.xpath("//*[@id=\"header-menu\"]/div/ul/li[3]/a")).shouldBe(Condition.visible).click();
+        $(By.xpath("//*[@id=\"header-menu\"]/div/ul/li[3]/a")).click();
         Credentials.initApiEndpoint();
         Credentials.initChatEndpoint();
     }

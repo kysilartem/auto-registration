@@ -18,6 +18,8 @@ public class Registration{
 
         Credentials.initCredentials();
 
+
+
         open(Credentials.getUrl());
         $(By.xpath("//*[@id=\"login-block\"]/div/div/div/p/a")).click();
         $(By.xpath("//*[@id=\"reg-block\"]/div/div/div/h3")).shouldBe(Condition.visible);
