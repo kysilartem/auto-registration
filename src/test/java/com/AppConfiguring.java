@@ -34,7 +34,7 @@ public class AppConfiguring {
     @BeforeClass
     private void setUp(){
 
-        Configuration.browserBinary = ".src\\test\\resources\\chromedriver";
+        Configuration.browserBinary = ".src\\test\\resources\\chromedriver.exe";
         Configuration.driverManagerEnabled = true;
         Configuration.headless = true;
 
