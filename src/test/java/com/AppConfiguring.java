@@ -1,8 +1,10 @@
 package com;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.io.*;
@@ -29,6 +31,8 @@ public class AppConfiguring {
 
     private boolean check = false;
 
+    @BeforeClass
+    private void setUp(){Configuration.headless = true;}
 
     @Test
     public void registration () throws IOException, InterruptedException {

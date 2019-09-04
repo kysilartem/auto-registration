@@ -1,6 +1,5 @@
 package com;
 
-import com.codeborne.selenide.Configuration;
 import com.jayway.restassured.path.json.JsonPath;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.openqa.selenium.By;
@@ -127,8 +126,6 @@ public class Credentials {
 
 
     static void initCredentials() throws IOException {
-        Configuration.headless = true;
-
         String credentials = new String(Files.readAllBytes(Paths.get("src/test/resources/credentials.json")));
         JsonPath jsonPath = new JsonPath(credentials);
 
