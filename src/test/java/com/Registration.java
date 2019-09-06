@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class Registration{
 
     private final String GMAIL_POP = "pop.gmail.com";
-    private final String EMAIL_PASSWORD ="27cc4949d6104a59a0deb2433caaeb573c520aaf";
+    private final String EMAIL_PASSWORD ="Doublemania1994";
 
 
 

@@ -136,7 +136,8 @@ public class Credentials {
         setFullName(jsonPath.getString("fullName"));
         setEmail(jsonPath.getString("email"));
         setLogin(jsonPath.getString("login"));
-        setPassword(DigestUtils.sha1Hex (getUrl().substring(8)+"18!new!update"));
+        //setPassword(DigestUtils.sha1Hex (getUrl().substring(8)+"18!new!update"));
+        setPassword("Doublemania1994");
         setRegCode(jsonPath.getString("regCode"));
 
     }
