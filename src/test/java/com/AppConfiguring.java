@@ -34,14 +34,13 @@ public class AppConfiguring {
 
 //set up headless mode if it's need
 
-//    @BeforeClass
-//    private void setUp(){
-//
-//        Configuration.browserBinary = ".src\\resources\\driver_file_name"
-//        Configuration.driverManagerEnabled = true;
-//        Configuration.headless = true;
-//
-//    }
+    @BeforeClass
+    private void setUp(){
+
+        Configuration.driverManagerEnabled = true;
+        Configuration.headless = true;
+
+    }
 
     @Test
     public void registration () throws IOException, InterruptedException {
