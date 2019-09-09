@@ -24,7 +24,6 @@ public class AccountConfirmation {
 
             // retrieve the messages from the folder in an array and print it
             Message[] messages = emailFolder.getMessages();
-            System.out.println(emailFolder.getUnreadMessageCount()+"messages count");
             String[] s = messages[messages.length - 1].getContent().toString().split("a href=\"");
             String[] s2 = s[1].split("\">");
             link = s2[0];
